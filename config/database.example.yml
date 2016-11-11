@@ -11,7 +11,7 @@ development:
   encoding: UTF8
   username: postgres
   password:
-  database: skeleton_development
+  database: cessation_development
 
 test:
   <<: *defaults
@@ -19,7 +19,7 @@ test:
   encoding: UTF8
   username: postgres
   password:
-  database: skeleton_test
+  database: cessation_test
 
 production:
   <<: *defaults

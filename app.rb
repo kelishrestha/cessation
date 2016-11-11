@@ -2,7 +2,7 @@
 require File.expand_path('../boot', __FILE__)
 
 # Application Module
-module Skeleton
+module Cessation
   #  API class to mount all the Base API endpints
   class App < Grape::API
 

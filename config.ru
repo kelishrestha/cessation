@@ -9,4 +9,4 @@ if ENV['RACK_ENV'] == 'production'
   end
 end
 
-run Rack::URLMap.new('/' => Skeleton::App, '/sidekiq' => Sidekiq::Web)
+run Rack::URLMap.new('/' => Cessation::App, '/sidekiq' => Sidekiq::Web)
