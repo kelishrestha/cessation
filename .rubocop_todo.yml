@@ -6,27 +6,22 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# # Offense count: 1
-# Lint/RescueException:
-#   Exclude:
-#     - 'app/consumers/base.rb'
-
 # Offense count: 11
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes.
 # URISchemes: http, https
 Metrics/LineLength:
-  Max: 160
+  Max: 100
 
 # Offense count: 1
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
-  Max: 11
+  Max: 15
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/BlockComments:
-  Exclude:
-    - 'spec/spec_helper.rb'
+# # Offense count: 1
+# # Cop supports --auto-correct.
+# Style/BlockComments:
+#   Exclude:
+#     - 'spec/spec_helper.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.

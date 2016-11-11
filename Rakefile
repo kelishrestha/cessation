@@ -1,22 +1,21 @@
 # frozen_string_literal: true
 Bundler.require
-require "sinatra/activerecord/rake"
-require "./app"
+require 'sinatra/activerecord/rake'
+require './app'
 
-task :default => :help
+task default: :help
 
 Dir['tasks/*.rake'].each { |task| load task }
 
 task :console do
-  puts "Loading development console..."
-  system("irb -r ./app.rb")
+  puts 'Loading development console...'
+  system('irb -r ./app.rb')
 end
 
 task :server do
-  puts "Loading development console..."
-  system("bundle exec shotgun -p 3003")
+  puts 'Loading development console...'
+  system('bundle exec shotgun -p 3003')
 end
-
 
 task :routes do
   Cessation::App.routes.each do |route|
@@ -24,18 +23,18 @@ task :routes do
   end
 end
 
-desc "Run specs"
+desc 'Run specs'
 task :spec do
-  system("bundle exec rspec")
+  system('bundle exec rspec')
 end
 
 task :rcov do
   ENV['COVERAGE'] = 'true'
-  Rake::Task["spec"].execute
+  Rake::Task['spec'].execute
 end
 
 task :help do
-db_tasks = <<DBTASKS
+  db_tasks = <<DBTASKS
   ##########################################
                 UTILITY TASKS
   ##########################################
@@ -71,6 +70,5 @@ db_tasks = <<DBTASKS
   rake db:structure:load      # Recreate the databases from the structure.sql file
   rake db:version             # Retrieves the current schema version number
 DBTASKS
-puts db_tasks.colorize(:green)
-
+  puts db_tasks.colorize(:green)
 end
