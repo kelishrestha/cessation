@@ -16,7 +16,7 @@ module Consumer
           exception: e,
           message: message,
           caller: caller_locations(1, 1)[0].label
-          })
+        })
       end
     end
   end
