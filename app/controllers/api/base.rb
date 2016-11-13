@@ -1,8 +1,11 @@
 # frozen_string_literal: true
-# require File.join(File.dirname(__FILE__), 'v1', 'base')
+require File.join(File.dirname(__FILE__), 'v1', 'base')
 module API
   # Base API class to mount multiple versions base classes
   class Base < Grape::API
+    prefix :api
+
+    # Helpers
     helpers do
       def logger
         AppLogger.logger
@@ -47,6 +50,6 @@ module API
       authenticate
     end
 
-    # mount API::V1::Base
+    mount API::V1::Base
   end
 end
