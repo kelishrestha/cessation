@@ -36,6 +36,8 @@ gem 'redis-namespace'
 
 group :development do
   gem 'shotgun'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec'
 end
 
 group :development, :test do
@@ -46,7 +48,6 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'pry'
   gem 'pry-nav'
-  gem 'rubocop', require: false
 end
 
 group :test do
