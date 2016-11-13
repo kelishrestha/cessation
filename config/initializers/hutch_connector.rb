@@ -12,7 +12,7 @@ module Hutch
                                       force_publisher_confirms: true)
     end
 
-    def config
+    def self.config
       path = File.expand_path('../../hutch.yml', __FILE__)
       YAML.load(ERB.new(File.read(path)).result)[(ENV['RACK_ENV'] || 'development')]
     end
