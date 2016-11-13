@@ -3,10 +3,11 @@ module Hutch
   module Connector
     def self.establish_connection
       hutch_config = config
+      rmq_host = hutch_config['mq_host']
       Hutch::Config.initialize.merge!(mq_username: hutch_config['mq_username'],
                                       mq_password: hutch_config['mq_password'],
-                                      mq_host: hutch_config['mq_host'],
-                                      mq_api_host: hutch_config['mq_host'],
+                                      mq_host: rmq_host,
+                                      mq_api_host: rmq_host,
                                       mq_vhost: hutch_config['mq_vhost'],
                                       channel_prefetch: 1,
                                       force_publisher_confirms: true)
