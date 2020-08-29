@@ -28,6 +28,8 @@ gem 'puma'
 
 gem 'redis'
 
+# AWS SDK for Ruby - Version 2
+gem 'aws-sdk', '~> 2'
 # namespaced subset of your redis keyspace
 # sidekiq >= 4.0 has no longer redis namespace as dependency
 # however, our redis connection is namespaced
